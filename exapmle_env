@@ -1,0 +1,9 @@
+# Discord
+DISCORD_TOKEN=
+
+# Telegram
+TELEGRAM_TOKEN=
+
+# Redis
+REDIS_HOST=redis
+REDIS_PORT=6379
