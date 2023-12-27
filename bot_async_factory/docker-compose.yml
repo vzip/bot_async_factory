@@ -6,20 +6,24 @@ services:
     ports:
       - "6379:6379"
 
-  discord:
-    build: ./discord
-    environment:
-      - DISCORD_TOKEN=${DISCORD_TOKEN}
-    volumes:
-      - ./discord:/app
-
   telegram:
     build: ./telegram
     environment:
       - TELEGRAM_TOKEN=${TELEGRAM_TOKEN}
+      - REDIS_HOST=${REDIS_HOST}
+      - REDIS_PORT=${REDIS_PORT}
     volumes:
-      - ./telegram:/app
+      - ./telegram:/app    
 
+  discord:
+    build: ./discord
+    environment:
+      - DISCORD_TOKEN=${DISCORD_TOKEN}
+      - REDIS_HOST=${REDIS_HOST}
+      - REDIS_PORT=${REDIS_PORT}
+    volumes:
+      - ./discord:/apps
+ 
   bot_logic:
     build: ./app
     environment:

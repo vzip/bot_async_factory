@@ -31,3 +31,5 @@ services:
       - REDIS_PORT=${REDIS_PORT}
     volumes:
       - ./app:/app
+
+

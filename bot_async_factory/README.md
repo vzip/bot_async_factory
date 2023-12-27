@@ -47,3 +47,6 @@ All app's import `abc_handler` module directory.
      - **config_queue.py**: Defined sources names for queues `['telegram_send']` to listen in the `AbstractConnectorAsync` class.
 - **telegram_client.py**: Entry point for the Telegram transport service.
 
+
+
+

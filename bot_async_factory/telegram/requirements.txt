@@ -1,0 +1,5 @@
+python-telegram-bot 
+redis 
+asyncio 
+python-dotenv 
+loguru

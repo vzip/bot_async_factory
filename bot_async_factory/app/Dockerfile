@@ -1,10 +1,13 @@
-FROM python:3.9-slim
+FROM python:3.11-slim
 
 # Install dependencies
-RUN pip install redis loguru python-dotenv
+RUN pip install redis \
+asyncio \
+python-dotenv \
+loguru
 
 # Copy the bot logic files
-COPY bot_logic.py /app/bot_logic.py
+COPY bot_logic.py .env /app/
 COPY ./abc_handler /app/abc_handler
 
 # Set the working directory
